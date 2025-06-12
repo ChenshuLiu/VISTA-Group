@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VISTA Group</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header><h1>VISTA Group</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="https://chenshuliu.github.io/Portfolio/">PI</a>
+    <a href="members.html">Members</a>
+    <a href="research.html">Research</a>
+    <a href="news.html">News</a>
+  </nav>
+
+  <!-- Gallery of highlights -->
+  <section class="highlight-gallery">
+    <div class="slider">
+      <a href="research.html" class="slide" title="Research">
+        <img src="Images/Highlights/ABM.JPG" alt="Research" />
+        <p>2023 ArtBioMatters Conference Presentation</p>
+      </a>
+      <a href="members.html" class="slide" title="Members">
+        <img src="Images/Highlights/Lucas Museum.jpg" alt="Members" />
+        <p>2024 Invited to talk at the Lucas Museum Paper Conservation Workshop</p>
+      </a>
+      <a href="news.html" class="slide" title="News">
+        <img src="images/news.jpg" alt="News" />
+        <p>Latest News</p>
+      </a>
+      <a href="pi.html" class="slide" title="PI">
+        <img src="images/pi.jpg" alt="PI" />
+        <p>Principal Investigator</p>
+      </a>
+      <a href="pi.html" class="slide" title="PI">
+        <img src="images/pi.jpg" alt="PI" />
+        <p>Principal Investigator</p>
+      </a>
+    </div>
+
+  <main>
+    <h2>Welcome to the VISTA group website</h2>
+    <p><strong>VISTA</strong> (Versatile Intelligence for Sensing, Technology & Applications) is a highly interdisciplinary research team dedicated to developing cutting-edge AI solutions that drive real-world impact across diverse domains. Just like the word “vista” suggests a broad and inspiring view, our work is aimed at opening up new horizons in technology and discovery — from intelligent systems and advanced sensing to transformative applications. We focus on integrating data-driven intelligence with the physical world to create technologies that are not only powerful but also far-sighted in their societal impact.</p>
+    <p>Our research spans a broad range of topics, including artificial intelligence, machine learning, computer vision, and reinforcement learning — all with strong ties to practical applications. We focus on integrating intelligent systems with advanced sensing technologies, aiming to address challenges in fields such as smart manufacturing, human-centered computing, wearable health devices, and imaging systems.</p>
+    <p>At VISTA, we emphasize both foundational algorithmic development and translational research. We work at the intersection of hardware and software, using data from the physical world to power adaptive, context-aware technologies. Our goal is to build systems that are not only technically innovative but also socially meaningful.</p>
+    <p>Whether it's improving decision-making in complex industrial settings, enhancing health monitoring through wearable devices, or developing intelligent agents capable of learning from their environment, we strive to bring versatility and intelligence to every project we tackle.</p>
+  </main>
+
+  <footer>&copy; 2025 VISTA Group</footer>
+
+  <script>
+const slider = document.querySelector('.slider');
+const slides = slider.querySelectorAll('.slide');
+const slideCount = slides.length;
+const slideWidth = slides[0].offsetWidth + 20; // slide width + gap
+let scrollPosition = 0;
+
+// Clone slides and append to slider
+slides.forEach(slide => {
+  const clone = slide.cloneNode(true);
+  slider.appendChild(clone);
+});
+
+function autoScroll() {
+  scrollPosition += 1; // scroll by 1 pixel for smoothness
+  if (scrollPosition >= slideWidth * slideCount) {
+    // Reset scroll without visible jump (scroll back to 0)
+    scrollPosition = 0;
+  }
+  slider.scrollLeft = scrollPosition;
+}
+
+setInterval(autoScroll, 12); // adjust speed by interval time and increment
+
+</script>
+</body>
+</html>

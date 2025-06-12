@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #00274D;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  color: white;  /* ✅ ensures title is visible */
+}
+
+nav {
+  background: #003366;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2em;
+}
+
+h1, h2 {
+  color: #00274D;
+}
+
+footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+/* gallery of highlights */
+.highlight-gallery {
+  margin: 40px 0;
+}
+
+.highlight-gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.slider {
+  scroll-behavior: auto; /* disable smooth for pixel scroll */
+  overflow-x: hidden;
+  display: flex;
+  gap: 20px;
+}
+
+.slide {
+  flex: 0 0 300px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+
+
+.slide:hover {
+  border-color: #007acc;
+}
+
+.slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.slide p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* make the border of the content larger */
+.container {
+  max-width: 1400px; /* or 900px, adjust as needed */
+  margin: 0 auto;     /* centers it horizontally */
+  padding: 0 40px;     /* optional: adds space inside the container */
+}
+
+.member-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  text-align: center;
+}
+
+.member-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* makes it a circle */
+  border: 3px solid #ccc;
+}
+
+.member-info {
+  margin-top: 10px;
+}
