@@ -124,3 +124,12 @@ footer {
 .member-info {
   margin-top: 10px;
 }
+
+#mindmap {
+  display: block;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
